@@ -24,12 +24,23 @@
     </style>
 </head>
 <body>
+    <div>
+        <div id="clock" style="font-size: 20px;" git ></div>
+    </div>
     <div id="cont">
 
     </div>
 </body>
 </html>
 <script>
+
+function updateClock ()
+{
+    const cl = document.getElementById("clock")
+		const time = new Date().toLocaleTimeString()
+    cl.textContent = time;
+}
+setInterval(updateClock, 1000);
     // API:-- Aplication Programming Interface
 
     // const x  = fetch();
